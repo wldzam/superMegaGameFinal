@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <meta name="description" content="Используй защиту для отражения атак пришельцев!"/>
+    <meta name="author" content="Wlad"/>
+
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <!--для апплов-->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="viewport" content="width = 450">
+
+    <title>SuperMegaGame built in HTML5 with some javascript</title>
+    <!--                     ссылки на стили                              -->
+    <link href="resetOK.css" rel="stylesheet" media="screen"/>
+    <link href="mainOK.css" rel="stylesheet" media="screen"/>
+    <!--шрифт не менять!!!! круглый красивый-->
+
+
+    <link href='https://fonts.googleapis.com/css?family=Molengo' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+
+<header>
+    <h1>SuperMegaGame</h1>
+    <span class="header-instruction">Наведи для инструкции</span>
+
+
+    <div class="extra">
+
+        <!-- описание    -->
+        <section id="about">
+            <h3>ИНСТРУКЦИЯ</h3>
+            <p>
+                Защити свой корабль от коварных пришельцев!<br/>
+                <br/>
+                Нажми и держи <b>ПРОБЕЛ</b> для временной защиты.
+            </p>
+            <p class="credits">
+                Created by <a target="_blank" href="http://wladzambrzhycki.h1n.ru/">Wlad</a>
+                | <a target="_blank" href="https://www.linkedin.com/in/wladyslaw-zambzhytski-801452168/">@WladSuperDevCompany</a>
+                | <a target="_blank" href="https://dev.by/users/vital-ihs">@FD-2 Menthor Vitali Krasilnikau</a>
+
+            </p>
+        </section>
+
+    </div>
+</header>
+
+<div id="score" class="menu"></div>
+<div id="panels">
+    <div id="message" class="menu">
+        <h2 id="title">SuperMegaGame</h2>
+
+        <ul>
+            <li>1. Защити корабль.</li>
+            <li>2. Лови энергию (зеленые шары).</li>
+            <li>3. Защищайся от чужих (красные шары) .</li>
+            <li>2. Удерживай пробел для защиты.</li>
+        </ul>
+        <a href="#" id="startButton">Старт</a>
+    </div>
+</div>
+
+<canvas id="world">
+    <p class="no-canvas">
+        Тебе нужен более <a href="http://www.google.com/chrome">современный браузер</a> для просмотра.
+    </p>
+</canvas>
+<canvas id="background"></canvas>
+
+
+<!--TODO    стили скрипты!!!!!!!!!!!!!!!!!!!!!!1   -->
+
+
+<script src="headerOK.js"></script>
+<script src="core.js"></script>
+
+<!-- Third party tracking and sharing code below -->
+<!--
+<script type="text/javascript">
+  /*  var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-15240703-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();*/
+</script>-->
+
+</body>
+</html>

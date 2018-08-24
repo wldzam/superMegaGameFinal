@@ -1,0 +1,282 @@
+/*********************************************
+             TODO Глобальные
+ *********************************************/
+
+body, html {
+    overflow: hidden;
+    font-family: Helvetica, Arial, sans-serif;
+    color: #fff;
+    font-size: 11px;
+    background: #010c12;
+}
+
+/*********************************************
+              TODO          Хедер
+ *********************************************/
+/*высота в неативном состоянии !!!!!!!*/
+header {
+    position: relative;
+    width: 100%;
+    height: 30px; /*высоту больше не делать видно остальные буквы*/
+    margin: 0;
+    padding: 0 8px 8px 8px;
+    overflow: hidden;
+    z-index: 5;
+
+    background: rgba(60, 60, 60, 0.5); /*полупрозрачный фон*/
+    color: silver;   /*  буквы верхние  цвет серый не бьет по глазам - оставлю */
+    /*анимация плавная*/
+    -webkit-transition: height .22s ease-out;
+    -moz-transition: height .22s ease-out;
+    -o-transition: height .22s ease-out;
+    transition: height .22s ease-out;
+}
+
+/*высота открывания хедера*/
+header.open {
+    height: 165px;
+}
+
+/*шрифты менюшки*/
+header h1 {
+    font-family: Molengo, Helvetica, Arial, sans-serif;
+    float: left;
+    /* положение на центр не ставить - перекрывает счет*/
+    margin-top: 5px;/*   */
+    margin-left: 5px;
+}
+
+header .header-instruction {
+    float: left;
+    margin: 12px 0 0 15px;
+
+    font-size: 10px;
+    font-style: italic;
+    color: silver;
+
+    -webkit-transition: opacity .18s linear;
+    -moz-transition: opacity .18s linear;
+    -o-transition: opacity .18s linear;
+    transition: opacity .18s linear;
+}
+
+header.open .header-instruction {
+    opacity: 0;
+}
+/*див с инструкцией*/
+header div.extra {
+    margin: 45px 0 0 20px;/* ниже не делать скрываеться*/
+    clear: both;
+
+    -webkit-transition: opacity .18s linear;
+    -moz-transition: opacity .18s linear;
+    -o-transition: opacity .18s linear;
+    transition: opacity .18s linear;
+}
+/*див с адресами оставить такое положение*/
+header div.extra h3 {
+    margin-bottom: 10px;
+}
+
+header a {
+    padding: 2px 4px 2px 2px;
+    color: #999;
+
+    -webkit-transition: all .1s ease-out;
+    -moz-transition: all .1s ease-out;
+    -o-transition: all .1s ease-out;
+    transition: all .1s ease-in;
+}
+/*цвет ссылок при наведении белый пойдет*/
+header a:hover {
+    padding: 2px 4px 2px 2px;
+
+    color: white;
+    background-color: #333;
+    border-radius: 1px;
+}
+
+header section {
+    height: 120px;
+    padding: 0 25px;
+    float: left;
+
+    border-left: 1px #333 solid;
+}
+
+header p {
+    margin-bottom: 5px;
+
+    font-size: 15px;
+    letter-spacing: 0.05em;
+}
+/*класс для инструкции*/
+#about {
+    padding-left: 0;
+    border:none;  /* рамку не ставить некрасиво*/
+}
+
+#about p.credits {
+    margin: 15px 0 2px 0;
+
+    font-style: italic;
+    color: #666;
+    font-size: 11px;
+    line-height: 1.4em;
+}
+
+#about a:hover {
+    padding: 2px 10px 2px 8px;
+}
+
+#share iframe,
+#share div {
+    display: inline-block;
+}
+/*
+
+#retweet-button {
+    margin-right:100px;
+}
+*/
+/*
+a[href="http://www.w3counter.com"] {
+    display: none !important;
+}*/
+/*TODO  ----------------------   если нет канвы*/
+
+
+
+.no-canvas {
+    color: #999999;
+    font-size: 24px;
+    text-align: center;
+    margin-top: 150px;
+}
+
+
+
+
+
+
+
+/*********************************************
+ * EXPERIMENT STYLES
+ *********************************************/
+
+canvas {
+    border: 6px #333333 solid; /*рамка канвы серая */
+    cursor: crosshair; /*курсор*/
+    z-index: 1; /*индекс 1 нижняя*/
+}
+
+#background {
+    border: none;
+    z-index: 0;
+}
+
+/*
+менюшка Старт и подсчет очков
+*/
+.menu {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px; /*  шрифт*/
+    color: #999999;
+    text-align: left;
+    padding: 8px;
+    background-color: rgba(0, 0, 0, 0.5);
+    float: left;
+    margin-left: 24%; /* расположение больше не делать*/
+}
+
+/*ширина вернего дива со счетом */
+#score {
+    width: 500px;
+    height: 15px;
+    padding: 8px;
+    display: none;
+    position: absolute;
+    z-index: 2;
+}
+/*стиль счета*/
+#score span {
+    color: white;
+    font-weight: bold;
+    margin-right: 5px;
+}
+/*стиль ФПС*/
+#score .fps {
+    float: right;
+}
+
+/*TODO      панель под старт*/
+/*панель под СТАРТ*/
+#panels {
+    width:100%;
+    position: absolute;
+    z-index: 3;
+}
+/*панель под СТАРТ*/
+#message {
+    padding: 16px;
+    margin-top: 10px;
+    width: 225px;
+}
+
+/*менюшка старт*/
+.menu h2 {
+    margin-bottom: 20px;
+    color: #eeeeee; /*цвет текста*/
+}
+
+/*менюшка с описанием гамы*/
+.menu ul {
+    margin: 10px 0;
+}
+
+.menu ul li {
+    margin: 0 0 2px 0;
+}
+
+
+/*TODO   ссылки стили*/
+
+/*ссылки  цвет и ховер*/
+.menu a {
+    outline: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 38px;
+    text-decoration: none;
+    color: #bbbbbb;
+    padding: 2px;
+    display: block;
+    transition: all .18s linear;
+    -o-transition: all .18s linear;
+    -moz-transition: all .18s linear;
+    -webkit-transition: all .18s linear;
+}
+
+.menu a:hover {
+    color: #ffffff;
+    background-color: #000000;
+    transition: all .18s linear;
+    -o-transition: all .18s linear;
+    -moz-transition: all .18s linear;
+    -webkit-transition: all .18s linear;
+}
+
+.menu a.external {
+    outline: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #bbbbbb;
+    display: inline;
+    padding: 0;
+}
+
+.menu a.external:hover {
+    color: #ffffff;
+}
+
